@@ -9,12 +9,11 @@
 * {
   margin: 0;
   padding: 0;
-
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -24,8 +23,9 @@ html:focus-within {
 }
 
 html,
-body{
+body {
   height: 100%;
+  overflow-x: hidden;
 }
 /* Set core body defaults */
 body {
@@ -41,7 +41,7 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture,
-svg  {
+svg {
   max-width: 100%;
   display: block;
 }
@@ -49,9 +49,9 @@ svg  {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -63,8 +63,14 @@ svg  {
 }
 /* /// */
 body {
-  font-size: 1.2em;
+  /* font-size: 1.1rem; */
+  text-align: center;
   overflow-x: hidden;
+  background: hsl(48, 22%, 95%);
+}
+
+p {
+  line-height: 1.5rem;
 }
 
 .align {
@@ -72,7 +78,7 @@ body {
 }
 
 section {
-  margin-bottom: 2em;
+  margin-bottom: 1.5rem;
 }
 
 .block {
@@ -87,13 +93,73 @@ section {
   color: #000000;
   display: block;
   text-align: center;
- }
+}
 
- .margin-top {
-  margin-top: 1em;
- }
+.margin {
+  margin: 1rem;
+}
 
 /* General styling */
+
+/* IPHONE */
+.center {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.relative {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  position: relative;
+}
+
+.tiktok {
+  display: flex;
+  width: 8.9em;
+  height: 19em;
+}
+
+.tiktok > video {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 35px;
+}
+
+.iphone {
+  position: absolute;
+  left: -0.5rem;
+  height: 19em;
+  max-width: 110em;
+  pointer-events: none;
+}
+
+.svg {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-evenly;
+  max-width: 2em !important;
+  padding-block: 0.5em;
+  font-size: 0.8em;
+  gap: 1.5em;
+}
+
+.svg > div {
+  max-width: 1em;
+}
+
+.svg > div > p {
+  width: 50px;
+}
+
+.bh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* NAV */
 .flex-nav {
@@ -113,7 +179,6 @@ section {
   background: hsla(0, 0%, 100%, 0.1);
   -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
-  
 }
 
 .primary-nav a {
@@ -150,7 +215,7 @@ section {
     height: 3rem;
     border: 0;
     aspect-ratio: 1;
-    top: .3rem;
+    top: 0.3rem;
     right: 1rem;
     z-index: 9999;
   }
@@ -160,23 +225,21 @@ section {
   }
 }
 
-  @media (min-width: 35em) {
-    .primary-nav {
-      padding-block: 2rem;
-      padding-inline: clamp(3rem, 10vw, 10rem);
-    }
-  
+@media (min-width: 35em) {
+  .primary-nav {
+    padding-block: 2rem;
+    padding-inline: clamp(3rem, 10vw, 10rem);
   }
+}
 
-
- /* Header */
+/* Header */
 .header_img {
   height: max(7em);
   overflow: hidden;
 }
 
 header > p {
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   padding: 1em;
 }
 
@@ -187,7 +250,7 @@ header > p {
   width: 100%;
   align-items: center;
 }
- 
+
 .creator-img {
   padding: 1em;
   overflow: hidden;
@@ -197,148 +260,159 @@ header > p {
   border-radius: 10px;
 }
 
-.creator-flex > h1 > span {
-  display: block;
-  font-size: 1.5em;
+.creator-flex > p {
+  margin: 1em;
 }
 
-/* PREVIOUS WORK / ARMANI */
-
-.flex-mobile {
-  display: flex;
+/* PREVIOUS WORK / ARMANI PARTNERSHIP */
+.previous-img-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 7em;
   align-items: center;
 }
-/*
-.tiktok {
-  display: flex;
-  width: 8.9em;
-  height: 19em;
-}
 
-.tiktok > video {
-  width: 100%;
-  height: 100%;
+.flex-img > img {
   object-fit: cover;
-  border-radius: 35px;
-} 
-
-.iphone {
-  position: absolute;
-  left: -.5rem;
-  height: 19em;
-  max-width: 110em;
-  pointer-events: none;
+  border-radius: 10px;
 }
 
-.svg {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  justify-content: space-evenly;
-  text-align: center;
-  max-width: 2em !important;
-  padding-block: .5em;
-  font-size: .8em;
-  gap: 1.5em;
-}
-
-.svg > div {
-  max-width: 1em;
-}
-
-.svg > div > p {
-  width: 50px;
-} */
-
-.img {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-.img > img {
-  padding: 1em;
-  border-radius: 30px;
-}
-
-.flex-box h1 {
-  font-size: 1.8em;
-}
-
-.svg-2 {
-  margin-top: 0.5em;
-  margin-left: 0.2em;
-}
-
-.svg-3 {
-  margin-top: 0.5em;
-  margin-right: 0.2em;
+.gap {
+  gap: 2rem;
 }
 
 /* PARTNERSHIPS */
 
-.grid-container {
+.grid-partnership {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
-.relative {
+/* NYC */
+.grid-NYC {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* FOLLOW ME */
+.profile {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 0;
+}
+
+.profile-pic {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  object-fit: cover;
+  background-image: url("images/ff803894e22b3b31795b70c217df3efe.jpg");
+  background-position: center center;
+  background-size: 150px;
   position: relative;
 }
 
-.center {
+.follow-icon {
+  position: absolute;
+  width: 1.2em;
+  height: 1.2em;
+  background-image: url("svg/icons8-add-50.png");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  bottom: 0;
+  right: 1.7em;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-around;
+  padding-block: 1rem;
+}
+
+.QR-code {
   display: flex;
   justify-content: center;
 }
-
-/* IPHONE */
-
-.tiktok {
-  display: flex;
-  width: 8.9em;
-  height: 19em;
+.QR-code > img {
+  max-height: 10rem;
+  max-width: 10rem;
 }
 
-.tiktok > video {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 35px;
-} 
-
-.iphone {
-  position: absolute;
-  left: -0.5rem;
-  height: 19em;
-  max-width: 110em;
-  pointer-events: none;
-}
-
-.svg {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: space-evenly;
-  max-width: 2em !important;
-  padding-block: .5em;
-  font-size: .8em;
-  gap: 1.5em;
-}
-
-.svg > div {
-  max-width: 1em;
-}
-
-.svg > div > p {
-  width: 50px;
-}
-
-.bh {
+/* THE PROCESS */
+.flex-process {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: start;
 }
+.flex-process > div {
+  margin: 1rem;
+}
+.process-step > span {
+  display: block;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.process-img {
+  display: none;
+}
+
+/* STARTING RATES */
+.start {
+  text-align: start;
+}
+.rates-img {
+  display: none;
+}
+
+.flex-rates {
+  display: flex;
+}
+
+.rates-num {
+  display: flex;
+  align-items: center;
+  font-size: 3em;
+  margin: 0.5rem;
+  /* font-weight: ; */
+}
+
+.rates-align {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+/* LETS CONNECT */
+.connect-img {
+  display: none;
+}
+
+.flex-connect {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.flex-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.com-link > a {
+  color: #000000;
+}
+
+.com-link > img {
+  display: inline;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.df {
+  width: 160px;
+  font-size: 1.5rem;
+  padding-inline: 1rem;
+}
+
+/* ////// */
