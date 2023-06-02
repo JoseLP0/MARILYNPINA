@@ -8,39 +8,83 @@
     <title>MARILYNPINA</title>
     <link rel="stylesheet" href="style.css" />
     <script src="nav.js" defer></script>
+    <script src="carousel.js" defer></script>
 </head>
 
 <body>
-    <div class="header_img">
-        <img id="head_img" src="images/0468eaceec183ea632136cf4ae9e0723.jpg" alt="" />
-    </div>
-
-    <button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false"></button>
-
-    <nav>
+    <header>
+        <p>UGC CREATOR PROTFOLIO</p>
         <ul data-visible="false" id="primary-nav" class="primary-nav flex-nav">
             <li>
-                <a href="#">Home</a>
+                <a class="anchor-link" href="#home">Home</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a class="anchor-link" href="#contact">Contact</a>
             </li>
             <li>
-                <a href="#">Videos</a>
+                <a class="anchor-link" href="#videos">Videos</a>
             </li>
             <li>
-                <a href="#">Rates</a>
+                <a class="anchor-link" href="#rates">Rates</a>
             </li>
         </ul>
-    </nav>
-
-    <header class="align">
-        <p>UGC CREATOR PROTFOLIO</p>
-        <h1>MARILYN PINA</h1>
     </header>
+
+
+
+
+
+    <!-- <div class="sticky">
+        <div id="home" class="bg-relative">
+            <div class="bg-img"></div>
+            <div class="bg-text">
+                <p>UGC CREATOR PROTFOLIO</p>
+                <button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false"></button>
+            </div>
+        </div>
+        <nav>
+            <ul data-visible="false" id="primary-nav" class="primary-nav flex-nav">
+                <li>
+                    <a class="anchor-link" href="#home">Home</a>
+                </li>
+                <li>
+                    <a class="anchor-link" href="#contact">Contact</a>
+                </li>
+                <li>
+                    <a class="anchor-link" href="#videos">Videos</a>
+                </li>
+                <li>
+                    <a class="anchor-link" href="#rates">Rates</a>
+                </li>
+            </ul>
+        </nav>
+    </div> -->
+
+    <!-- <nav>
+        <ul data-visible="false" id="primary-nav" class="primary-nav flex-nav">
+            <li>
+                <a class="anchor-link" href="#home">Home</a>
+            </li>
+            <li>
+                <a class="anchor-link" href="#contact">Contact</a>
+            </li>
+            <li>
+                <a class="anchor-link" href="#videos">Videos</a>
+            </li>
+            <li>
+                <a class="anchor-link" href="#rates">Rates</a>
+            </li>
+        </ul>
+    </nav> -->
+
+    <!-- <header>
+        <p>UGC CREATOR PROTFOLIO</p>
+        <button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false"></button>
+    </header> -->
 
     <main>
         <section>
+            <h1 class="title">MARILYN PINA</h1>
             <div class="meet-creator">
                 <div class="creator-img">
                     <img src="images/ff803894e22b3b31795b70c217df3efe.jpg" alt="" />
@@ -544,7 +588,7 @@
             <img src="images/495649a761a312c998c7071eddbe36fc.jpg" alt="" class="process-img" />
         </section>
 
-        <section class="starting-rates">
+        <section id="rates" class="starting-rates">
             <h1 class="title">STARTING RATES</h1>
             <img src="images/62762d62bc4256303178c5f176a213d6.jpg" alt="" class="rates-img" />
             <h2>PACKAGES & BUNDLES:</h2>
@@ -656,7 +700,7 @@
         <!-- //// -->
         <section class="connect">
             <div class="grid-10">
-                <h1 class="title">LETS CONNECT</h1>
+                <h1 id="contact" class="title">LETS CONNECT</h1>
                 <div class="flex-connect start">
                     <div class="df">
                         <p>lets take your social media to its full potential</p>
@@ -685,129 +729,341 @@
             </div>
         </section>
 
-        <section class="photography">
-            <div class="grid-11">
-                <h1 class="grid-item-11">PHOTOGRAPHY PORTFOLIO</h1>
-                <img src="images/922d572e4560e809da4f5542fd0f1904.jpg" alt="" class="grid-item-11" />
-                <img src="images/5585fabcab5c69f97b5f5507b025e1b2.jpg" alt="" class="grid-item-11" />
-                <img src="images/909cb5e154d298a8517022ae05600ba0.jpg.webp" alt="" class="grid-item-11" />
-                <img src="images/56a1441aff1e3b77ac53059d99c9bd49.jpg" alt="" class="grid-item-11" />
-                <img src="images/994b3cc926754935fb51d4eba55c0067.jpg" alt="" class="grid-item-11" />
-                <img src="images/08582a4bc04289c03ef65f3235ef3b03.png" alt="" class="grid-item-11" />
-                <img src="images/c3d5470e1e46f232a021a37430749a9f.jpg" alt="" class="grid-item-11" />
-                <img src="images/9633ba9867a6de1ef4bfd4717bc2d966.png" alt="" class="grid-item-11" />
+        <section>
+            <h1 class="title">PHOTOGRAPHY PORTFOLIO</h1>
+
+            <div class="carousel">
+
+                <button class="carousel-btn carousel-left hidden">
+                    <img src="svg/icons8-left-25.png" alt="">
+                </button>
+
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <li class="carousel-slide current-slide">
+                            <img class="carousel-img" src="images/922d572e4560e809da4f5542fd0f1904.jpg" alt="" />
+                        </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-img" src="images/5585fabcab5c69f97b5f5507b025e1b2.jpg" alt="" />
+                        </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-img" src="images/909cb5e154d298a8517022ae05600ba0.jpg.webp" alt="" />
+                        </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-img" src="images/56a1441aff1e3b77ac53059d99c9bd49.jpg" alt="" />
+                        </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-img" src="images/994b3cc926754935fb51d4eba55c0067.jpg" alt="" />
+                        </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-img" src="images/08582a4bc04289c03ef65f3235ef3b03.png" alt="" />
+                        </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-img" src="images/c3d5470e1e46f232a021a37430749a9f.jpg" alt="" />
+                        </li>
+                        <li class="carousel-slide">
+                            <img class="carousel-img" src="images/9633ba9867a6de1ef4bfd4717bc2d966.png" alt="" />
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="carousel-btn carousel-right">
+                    <img src="svg/icons8-right-25.png" alt="">
+                </button>
+
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-slide"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                </div>
             </div>
         </section>
 
-        <section class="short-form">
-            <div class="flex-box-column">
-                <p>browse my</p>
-                <p>short formvideo portfolio</p>
-                <p>BELOW</p>
+        <!-- <section>
+            <div class="carousel">
+
+                <button class="carousel-btn carousel-left hidden">
+                    <img src="svg/icons8-left-25.png" alt="">
+                </button>
+
+                <div class="carousel-track-container">
+                    <ul class="carousel-track2">
+                        <li class="carousel-slide current-slide">
+                            <div class="center align carousel-img">
+                                <div class="relative">
+                                    <div class="tiktok align">
+                                        <video src="media/Snaptik.app_7147084363681860906.mp4"></video>
+                                        <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                                    </div>
+                                    <a class="link"
+                                        href="https://www.tiktok.com/@marilynpinaa/video/7147084363681860906">#datenight</a>
+                                    <h6>AREA 53</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="center align carousel-img">
+                                <div class="relative">
+                                    <div class="tiktok align">
+                                        <video src="media/Snaptik.app_7126569240299146542.mp4"></video>
+                                        <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                                    </div>
+                                    <a class="link"
+                                        href="https://www.tiktok.com/@marilynpinaa/video/7126569240299146542">#thingstodoinNYC</a>
+                                    <h6>CHINATOWN NYC</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="center align carousel-img">
+                                <div class="relative">
+                                    <div class="tiktok align">
+                                        <video src="media/Snaptik.app_7151556110976044334.mp4"></video>
+                                        <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                                    </div>
+                                    <a class="link"
+                                        href="https://www.tiktok.com/@marilynpinaa/video/7151556110976044334">NYceats</a>
+                                    <h6>Ramirez</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="center align carousel-img">
+                                <div class="relative">
+                                    <div class="tiktok align">
+                                        <video src="media/Snaptik.app_7145439732414106922.mp4"></video>
+                                        <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                                    </div>
+                                    <a class="link"
+                                        href="https://www.tiktok.com/@marilynpinaa/video/7145439732414106922">#thingstodoinNYC</a>
+                                    <h6>Queens Night Market</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="center align carousel-img">
+                                <div class="relative">
+                                    <div class="tiktok align">
+                                        <video src="media/Snaptik.app_7191639665064168747.mp4"></video>
+                                        <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                                    </div>
+                                    <a class="link"
+                                        href="https://www.tiktok.com/@marilynpinaa/video/7191639665064168747">#nyclocal</a>
+                                    <h6>El Santos</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="center align carousel-img">
+                                <div class="relative">
+                                    <div class="tiktok align">
+                                        <video src="media/Snaptik.app_7202230234110889262.mp4"></video>
+                                        <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                                    </div>
+                                    <a class="link"
+                                        href="https://www.tiktok.com/@marilynpinaa/video/7202230234110889262">#datenight</a>
+                                    <h6>REd INside Culinary Studio</h6>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="carousel-btn carousel-right">
+                    <img src="svg/icons8-right-25.png" alt="">
+                </button>
+
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-slide"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                    <button class="carousel-indicator"></button>
+                </div>
             </div>
-        </section>
+        </section> -->
+
+
+
+
+
+
+
+
+
+
 
         <section class="NYC-2">
-            <div class="grid-12">
-                <h1 class="grid-item-12">NEW YORK CITY</h1>
-                <p class="grid-item-12">
+            <div>
+                <h1 class="title">NEW YORK CITY</h1>
+                <p>
                     I love creating content of some of the locally owned shops around
                     NYC. My content has helped businesses by bringing in new customers
                     to these locally owned shops.
                 </p>
-                <div class="grid-item-12 phone">
-                    <video src="/media/Snaptik.app_7147084363681860906.mp4"></video>
-                    <img src="svg/kindpng_4787232.png" alt="" />
-                    <a href="https://www.tiktok.com/@marilynpinaa/video/7147084363681860906">#datenight</a>
-                    <h6>AREA 53</h6>
-                </div>
-                <div class="grid-item-12 phone">
-                    <video src="/media/Snaptik.app_7126569240299146542.mp4"></video>
-                    <img src="svg/kindpng_4787232.png" alt="" />
-                    <a href="https://www.tiktok.com/@marilynpinaa/video/7126569240299146542">#thingstodoinNYC</a>
-                    <h6>CHINATOWN NYC</h6>
-                </div>
-                <div class="grid-item-12 phone">
-                    <video src="/media/Snaptik.app_7151556110976044334.mp4"></video>
-                    <img src="svg/kindpng_4787232.png" alt="" />
-                    <a href="https://www.tiktok.com/@marilynpinaa/video/7151556110976044334">NYceats</a>
-                    <h6>Ramirez</h6>
-                </div>
-                <div class="grid-item-12 phone">
-                    <video src="/media/Snaptik.app_7145439732414106922.mp4"></video>
-                    <img src="svg/kindpng_4787232.png" alt="" />
-                    <a href="https://www.tiktok.com/@marilynpinaa/video/7145439732414106922">#thingstodoinNYC</a>
-                    <h6>Queens Night Market</h6>
-                </div>
-                <div class="grid-item-12 phone">
-                    <video src="/media/Snaptik.app_7191639665064168747.mp4"></video>
-                    <img src="svg/kindpng_4787232.png" alt="" />
-                    <a href="https://www.tiktok.com/@marilynpinaa/video/7191639665064168747">#nyclocal</a>
-                    <h6>El Santos</h6>
-                </div>
-                <div class="grid-item-12 phone">
-                    <video src="/media/Snaptik.app_7202230234110889262.mp4"></video>
-                    <img src="svg/kindpng_4787232.png" alt="" />
-                    <a href="https://www.tiktok.com/@marilynpinaa/video/7202230234110889262">#datenight</a>
-                    <h6>REd INside Culinary Studio</h6>
+                <div class="two-three-grid">
+                    <div class="center align">
+                        <div class="relative">
+                            <div class="tiktok align">
+                                <video src="media/Snaptik.app_7147084363681860906.mp4"></video>
+                                <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                            </div>
+                            <a class="link"
+                                href="https://www.tiktok.com/@marilynpinaa/video/7147084363681860906">#datenight</a>
+                            <h6>AREA 53</h6>
+                        </div>
+                    </div>
+                    <div class="center align">
+                        <div class="relative">
+                            <div class="tiktok align">
+                                <video src="media/Snaptik.app_7126569240299146542.mp4"></video>
+                                <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                            </div>
+                            <a class="link"
+                                href="https://www.tiktok.com/@marilynpinaa/video/7126569240299146542">#thingstodoinNYC</a>
+                            <h6>CHINATOWN NYC</h6>
+                        </div>
+                    </div>
+                    <div class="center align">
+                        <div class="relative">
+                            <div class="tiktok align">
+                                <video src="media/Snaptik.app_7151556110976044334.mp4"></video>
+                                <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                            </div>
+                            <a class="link"
+                                href="https://www.tiktok.com/@marilynpinaa/video/7151556110976044334">NYceats</a>
+                            <h6>Ramirez</h6>
+                        </div>
+                    </div>
+                    <div class="center align">
+                        <div class="relative">
+                            <div class="tiktok align">
+                                <video src="media/Snaptik.app_7145439732414106922.mp4"></video>
+                                <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                            </div>
+                            <a class="link"
+                                href="https://www.tiktok.com/@marilynpinaa/video/7145439732414106922">#thingstodoinNYC</a>
+                            <h6>Queens Night Market</h6>
+                        </div>
+                    </div>
+                    <div class="center align">
+                        <div class="relative">
+                            <div class="tiktok align">
+                                <video src="media/Snaptik.app_7191639665064168747.mp4"></video>
+                                <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                            </div>
+                            <a class="link"
+                                href="https://www.tiktok.com/@marilynpinaa/video/7191639665064168747">#nyclocal</a>
+                            <h6>El Santos</h6>
+                        </div>
+                    </div>
+                    <div class="center align">
+                        <div class="relative">
+                            <div class="tiktok align">
+                                <video src="media/Snaptik.app_7202230234110889262.mp4"></video>
+                                <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                            </div>
+                            <a class="link"
+                                href="https://www.tiktok.com/@marilynpinaa/video/7202230234110889262">#datenight</a>
+                            <h6>REd INside Culinary Studio</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <scetion class="lifestyle-content">
-            <div class="grid-13">
-                <h1 class="grid-item-13">LIFESTYLE CONTENT</h1>
-                <p class="grid-item-13">
+        <scetion id="videos" class="lifestyle-content">
+            <div>
+                <h1 class="title">LIFESTYLE CONTENT</h1>
+                <p>
                     View more lifestyle content I have made for some of the products I
                     ended up loving. This is organic content I make to share products I
                     think are a good deal, will solve problems, and make me feel good.
                 </p>
-                <div class="grid-item-13 phone">
-                    <video src="/media/Snaptik.app_7197207079365512494.mp4"></video>
-                    <img src="svg/kindpng_4787232.png" alt="" />
-                    <a href="#">DEMO CONTENT</a>
-                    <h6>A LA PINA, NY</h6>
-                </div>
-                <div class="grid-item-13 phone">
-                    <video src="/media/Snaptik.app_7197207079365512494.mp4"></video>
-                    <img src="svg/kindpng_4787232.png" alt="" />
-                    <a href="https://www.tiktok.com/@marilynpinaa/video/7197207079365512494">UNBOXING</a>
-                    <h6>AMAZON CESCA CHAIR DUPE</h6>
-                </div>
-                <div class="grid-item-13 phone">
-                    <video src="/media/"></video>
-                    <img src="svg/kindpng_4787232.png" alt="" />
-                    <a href="#">TESTIMONIAL STYLE</a>
-                    <h6>AMAZON</h6>
-                </div>
-                <div class="grid-item-13 phone">
-                    <video src="/media/Snaptik.app_7200946506138996011.mp4"></video>
-                    <img src="svg/kindpng_4787232.png" alt="" />
-                    <a href="https://www.tiktok.com/@marilynpinaa/video/7200946506138996011">TRENDING SOUND</a>
-                    <h6>BENQ GV30</h6>
-                </div>
-                <div class="grid-item-13 phone">
-                    <video src="/media/Snaptik.app_7153781922005552427.mp4"></video>
-                    <img src="svg/kindpng_4787232.png" alt="" />
-                    <a href="https://www.tiktok.com/@marilynpinaa/video/7153781922005552427">DEMO CONTENT</a>
-                    <h6>IKEA</h6>
-                </div>
-                <div class="grid-item-13 phone">
-                    <video src="/media/Snaptik.app_7126132084237782314.mp4"></video>
-                    <img src="svg/kindpng_4787232.png" alt="" />
-                    <a href="https://www.tiktok.com/@marilynpinaa/video/7126132084237782314">UNBOXING</a>
-                    <h6>TRESTIQUE</h6>
+                <div class="two-three-grid">
+                    <div class="center align">
+                        <div class="relative">
+                            <div class="tiktok align">
+                                <video src="media/Snaptik.app_7197207079365512494.mp4"></video>
+                                <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                            </div>
+                            <a class="link" href="#">DEMO CONTENT</a>
+                            <h6>A LA PINA, NY</h6>
+                        </div>
+                    </div>
+                    <div class="center align">
+                        <div class="relative">
+                            <div class="tiktok align">
+                                <video src="media/Snaptik.app_7197207079365512494.mp4"></video>
+                                <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                            </div>
+                            <a class="link"
+                                href="https://www.tiktok.com/@marilynpinaa/video/7197207079365512494">UNBOXING</a>
+                            <h6>CESCA CHAIR DUPE</h6>
+                        </div>
+                    </div>
+                    <div class="center align">
+                        <div class="relative">
+                            <div class="tiktok align">
+                                <video src="media/Snaptik.app_7145439732414106922.mp4"></video>
+                                <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                            </div>
+                            <a class="link" href="#">TESTIMONIAL</a>
+                            <h6>AMAZON</h6>
+                        </div>
+                    </div>
+                    <div class="center align">
+                        <div class="relative">
+                            <div class="tiktok align">
+                                <video src="media/Snaptik.app_7200946506138996011.mp4"></video>
+                                <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                            </div>
+                            <a class="link"
+                                href="https://www.tiktok.com/@marilynpinaa/video/7200946506138996011">TRENDING
+                                SOUND</a>
+                            <h6>BENQ GV30</h6>
+                        </div>
+                    </div>
+                    <div class="center align">
+                        <div class="relative">
+                            <div class="tiktok align">
+                                <video src="media/Snaptik.app_7153781922005552427.mp4"></video>
+                                <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                            </div>
+                            <a class="link" href="https://www.tiktok.com/@marilynpinaa/video/7153781922005552427">DEMO
+                                CONTENT</a>
+                            <h6>IKEA</h6>
+                        </div>
+                    </div>
+                    <div class="center align">
+                        <div class="relative">
+                            <div class="tiktok align">
+                                <video src="media/Snaptik.app_7126132084237782314.mp4"></video>
+                                <img src="svg/kindpng_4787232.png" alt="" class="iphone" />
+                            </div>
+                            <a class="link"
+                                href="https://www.tiktok.com/@marilynpinaa/video/7126132084237782314">UNBOXING</a>
+                            <h6>TRESTIQUE</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
         </scetion>
-
-        <footer class="thank-you">
-            <div class="end">
-                <h1>THANK YOU</h1>
-                <a href="#">SCROLL TO THE TOP</a>
-            </div>
-        </footer>
     </main>
+
+    <footer>
+        <div class="thank-you">
+            <h1 class="title">THANK YOU</h1>
+            <a class="link back-to-top" href="#">SCROLL TO THE TOP</a>
+        </div>
+    </footer>
+
 </body>
 
 </html>
